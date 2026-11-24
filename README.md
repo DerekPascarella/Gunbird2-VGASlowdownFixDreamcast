@@ -137,7 +137,7 @@ The two graphical bugs are tied to the same doubling. The Gallery already draws 
  </tr>
 </table>
 
-With this patch, the game renders 320x240 in VGA mode exactly as it does on a TV, and the console's video hardware stretches that picture to 640x480 on its way out to the monitor. The PowerVR chip has two settings for this. Line double sends every line of the picture twice, and pixel double sends every pixel twice. The monitor receives the same 640x480 signal as before, with the same timings, but the chip only has to draw a quarter of the pixels.
+With this patch, the game renders 320x240 in VGA mode exactly as it does in non-VGA mode, and the console's video hardware stretches that picture to 640x480 on its way out. The PowerVR chip has two settings for this. Line double sends every line of the picture twice, and pixel double sends every pixel twice. The monitor receives the same 640x480 signal as before, with the same timings, but the chip only has to draw a quarter of the pixels.
 
 It starts with the game's boot code, which now asks for 320x240 on a VGA cable and leaves the double-size flag off.
 
