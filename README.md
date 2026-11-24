@@ -114,7 +114,7 @@ The game has since been re-released on the Nintendo Switch, Windows, PlayStation
 
 ## About the Fix
 
-"Gunbird 2" is a 320x240 game. With a composite, S-Video, or RGB cable attached, it runs in 320x240 from start to finish, apart from the Capcom logo and the Gallery, both of which use 640x480. A VGA monitor can't display 320x240, though. When the game sees a VGA cable, it sets the display to 640x480 and switches on a flag that tells its own drawing code to draw everything at double size.
+"Gunbird 2" is a 320x240 game. With a composite, S-Video, or RGB cable attached, it runs in 320x240 from start to finish, apart from the Capcom logo and the Gallery, both of which use 640x480. a VGA signal isn't meant to be 320x240, though. When the game sees a VGA cable, it sets the display to 640x480 and switches on a flag that tells its own drawing code to draw everything at double size.
 
 What's known for certain is that doubling the width and height of every sprite and background tile leaves the console's PowerVR graphics chip with four times as many pixels to fill as it has on a TV. It's also known that, at least in the first stage, the game submits everything it draws as translucent polygons, which are the most expensive kind for the chip to draw. Measured in an emulator during that stage, the polygons add up to roughly 180,000 pixels per frame on a TV, and anywhere from 670,000 to 990,000 in VGA mode.
 
